@@ -17,11 +17,17 @@
 3. Push
 - `Trước khi push thì luôn pull (fetch - merge) code`
 - `Chỉ được push trên các nhánh được chỉ định. Các branch nhà nhánh của branch develop`
-- <b>`Tuyệt đối không được push thằng lên origin master`
+- <b>`Tuyệt đối không được push thằng lên origin master`</b>
 
 4. Merge
 - `Người được giao nhiệm vụ sẽ thực hiện meger code branch vào branch lớm hơn (develop, master)`
 - `Phải tạo merge request cho người thưc hiện merge`
+
+5. Đặt tên branch
+- `ten: là tên viết tắt theo hình thức: Đỗ Thiện Hợp => hopdt. Với "hop" tên viết thường không dấu, "dt" viết tắt của họ và tên đệm`
+- `group: backend hoặc frontend`
+- `name-branch: ví dụ fix-method-save-img-topic`
+- <b>[ ten_group_name-branch]</b>
 
 ### B. Cấu trúc thư mục
 1. Backend
