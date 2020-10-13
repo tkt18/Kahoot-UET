@@ -3,6 +3,10 @@
 ## Quy tắc chung.
 
 ### A. Git
+0. Backup_code
+- `Mọi người nên fork project về repository của mình và code trên đó`
+- `Sau khu code xong trên repository của mình thì tạo merge request đến repo của mình`
+
 1. Code<br>
 - `Mỗi một chức năng, thao tác thì tạo branch riêng để phát triển độc lập. Tránh conflict code`<br>
 - `Trước khi code thì fetch -> merge code (hoặc pull) - khuyến khích fetch - merge`
