@@ -9,7 +9,7 @@ class QuestionsController extends Controller
 {
     public function getQuestion ($topicId = 1) {
 //        $isDelete =
-        $data = Questions::where('topic_id', $topicId)->get();
+        $data = Questions::where('topic_id', $topicId)->orderBy('sequence', 'asc') ->get();
         return view('pages.question', ['data' => $data]);
     }
 }
