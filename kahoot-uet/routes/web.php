@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/topic', 'TopicController@getTopic');
+Route::get('/question', 'QuestionsController@getQuestion');
