@@ -21,5 +21,6 @@ Route::get('/room', 'RoomController@save');
 Route::get('/topic', 'TopicController@getTopic');
 Route::get('/topic_save', 'TopicController@store');
 Route::get('/update', 'TopicController@update');
+Route::get('/delete', 'TopicController@destroy');
 //Route::resource('/topic', 'TopicController');
 Route::get('/question', 'QuestionsController@getQuestion');

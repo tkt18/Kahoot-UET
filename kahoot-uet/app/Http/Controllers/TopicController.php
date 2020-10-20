@@ -57,4 +57,19 @@ class TopicController extends Controller
 
         return view('pages.topic', ['data' => json_encode($data, JSON_PRETTY_PRINT)] );
     }
+
+    public function destroy () {
+        $creatorId = 1;
+        $dataGet = Topics::where('creator_id', $creatorId)->orderBy('id', 'asc')->limit(1)->get();
+        $dataGet['objcet'] = 'GEt';
+        $data = [];
+        array_push($data, $dataGet);
+        $id = $dataGet[0]['id'];
+        Topics::where('id', $id)->delete();
+        $dataGetAfterDelete = Topics::where('creator_id', $creatorId)->orderBy('id', 'asc')->limit(1)->get();
+        $dataGetAfterDelete['object'] = 'object after delete';
+
+        array_push($data, $dataGetAfterDelete);
+        return view('pages.topic', ['data' => json_encode($data, JSON_PRETTY_PRINT)] );
+    }
 }
