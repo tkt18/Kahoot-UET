@@ -44,4 +44,17 @@ class TopicController extends Controller
         }
         return view('pages.topic', ['data' => $questions]);
     }
+
+
+
+    public function update () {
+        $creatorId = 1;
+
+        $dataGet = Topics::where('creator_id', $creatorId)->limit(1)->get();
+        Topics::where('creator_id', $creatorId)->limit(1)->update(['name' => 'con cac', 'is_played' => 1]);
+        $data = [];
+        array_push($data, $dataGet);
+
+        return view('pages.topic', ['data' => json_encode($data, JSON_PRETTY_PRINT)] );
+    }
 }
