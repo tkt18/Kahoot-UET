@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/room', 'RoomController@save');
 Route::get('/topic', 'TopicController@getTopic');
+Route::get('/topic_save', 'TopicController@store');
+
+//Route::resource('/topic', 'TopicController');
 Route::get('/question', 'QuestionsController@getQuestion');
