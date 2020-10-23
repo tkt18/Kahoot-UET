@@ -15,7 +15,7 @@ class TopicSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 100;
+        $numberRecord = 10;
         factory(Topics::class, $numberRecord)->create();
 
     }

@@ -12,7 +12,7 @@ class FakeUserSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 100;
+        $numberRecord = 50;
         factory(User::class, $numberRecord)->create();
     }
 }
