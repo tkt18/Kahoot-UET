@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/topic', 'TopicController@getTopic');
+Route::resource('/topic', 'TopicController');
