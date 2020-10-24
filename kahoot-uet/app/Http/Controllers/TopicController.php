@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Questions;
+use App\Rooms;
 use App\Topics;
 use App\User;
 use Carbon\Carbon;
@@ -12,9 +13,9 @@ use Faker\Generator as Faker;
 class TopicController extends Controller
 {
     public function index () {
-        $creator_id = 2;
+        $creator_id = 3;
 
-        $myTopic = Topics::select('id' ,'name', 'creator_id', 'created_at', 'is_public', 'is_daft')->where('creator_id', $creator_id)->where('is_deleted', 0)->get();
+        $myTopic = Topics::select('id' ,'name', 'creator_id', 'created_at', 'is_public', 'is_daft', 'is_played')->where('creator_id', $creator_id)->where('is_deleted', 0)->get();
         $result = [];
         for ($i = 0; $i < count($myTopic); $i++) {
             $topic = $myTopic[$i];
@@ -22,6 +23,10 @@ class TopicController extends Controller
             $creatorName = $creatorName[0]['username'];
             $topic['creator_name'] = $creatorName;
             $topic['number_question'] = Questions::where('topic_id', $topic['id'])->count();
+            if ($topic['is_played']) {
+                $numberPlayer = Rooms::select('id')->where('topic_id', $topic['id'])->get();
+                $topic['number_played'] = $numberPlayer;
+            }
         }
         return view('pages.topic', ['data' => $myTopic]);
     }
