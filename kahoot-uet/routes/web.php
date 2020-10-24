@@ -19,3 +19,10 @@ Route::get('/', function () {
 
 Route::resource('/topic', 'TopicController');
 Route::resource('/question', 'QuestionsController');
+Route::get('/room/finish', 'RoomController@finishRoom');
+Route::resource('/room', 'RoomController');
+//Route::group(['perfix' => 'room'], function () {
+//    Route::get('', 'RoomController' );
+//
+//
+//});
