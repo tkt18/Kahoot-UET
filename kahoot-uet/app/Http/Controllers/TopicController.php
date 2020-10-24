@@ -15,7 +15,7 @@ class TopicController extends Controller
     public function index () {
         $creator_id = 1;
 
-        $myTopic = Topics::select('id' ,'name', 'creator_id', 'created_at', 'is_public', 'is_daft', 'is_played')->where('creator_id', $creator_id)->where('is_deleted', 0)->get();
+        $myTopic = Topics::select('id' ,'name', 'creator_id', 'created_at', 'is_public', 'is_daft', 'is_played', 'created_at')->where('creator_id', $creator_id)->where('is_deleted', 0)->get();
         $result = [];
         for ($i = 0; $i < count($myTopic); $i++) {
             $topic = $myTopic[$i];
