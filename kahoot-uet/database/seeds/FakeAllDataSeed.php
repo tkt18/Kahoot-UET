@@ -14,7 +14,7 @@ class FakeAllDataSeed extends Seeder
         $this->call([
             FakePlayerRoomSeeder::class,
             FakePlayerSeeder::class,
-            FakeQuestionSeeder::class,
+//            FakeQuestionSeeder::class,
             FakeRoomSeeder::class,
             FakeUserSeeder::class,
             TopicSeeder::class
