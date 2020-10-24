@@ -27,6 +27,9 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
-        "react-router": "^5.2.0"
+        "bootstrap-icons": "^1.0.0",
+        "react-bootstrap-icons": "^1.0.0",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0"
     }
 }
