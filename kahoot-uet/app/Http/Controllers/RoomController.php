@@ -29,6 +29,7 @@ class RoomController extends Controller
     public function finishRoom () {
         $roomId = 201;
         $room = Rooms::where('id', $roomId)->update(['is_finish' => 1]);
+
         return view('pages.topic', ['data' => $room]);
     }
 
