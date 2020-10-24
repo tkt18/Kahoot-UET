@@ -32,4 +32,10 @@ class RoomController extends Controller
         return view('pages.topic', ['data' => $room]);
     }
 
+    public function lockRoom () {
+        $roomId = 201;
+        $room = Rooms::where('id', $roomId)->update(['is_lock' => 1]);
+        return view('pages.topic', ['data' => $room]);
+    }
+
 }
