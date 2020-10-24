@@ -11,7 +11,7 @@ import {
     PersonCircle
 } from "react-bootstrap-icons";
 
-function App() {
+function Header() {
     return (
         <HashRouter>
             <nav className="navbar navbar-expand-lg nav-header">
@@ -72,7 +72,7 @@ function App() {
                         aria-labelledby="dropdownMenuButton"
                     >
                         <h6 class="dropdown-header">User Name</h6>
-                        <Link to={"/test"} class="dropdown-item">
+                        <Link to={"/user"} class="dropdown-item">
                             Setting
                         </Link>
                         <Link class="dropdown-item">Sign Out</Link>
@@ -85,8 +85,8 @@ function App() {
     );
 }
 
-export default App;
+export default Header;
 
-if (document.getElementById("app")) {
-    ReactDOM.render(<App />, document.getElementById("app"));
+if (document.getElementById("header")) {
+    ReactDOM.render(<Header />, document.getElementById("header"));
 }

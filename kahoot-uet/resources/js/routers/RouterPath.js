@@ -19,3 +19,26 @@ function RouterPath() {
 }
 
 export default RouterPath;
+
+// export default class Test extends Component {
+//     render() {
+//         return (
+//             <HashRouter>
+//                 <div>
+//                     <ul>
+//                         <li>
+//                             <Link to={'/'}>Home</Link>
+//                         </li>
+//                         <li>
+//                             <Link to={'/topic'}>Topic</Link>
+//                         </li>
+//                         <li>
+//                             <Link to={'/about'}>About</Link>
+//                         </li>
+//                     </ul>
+//                     <RouterPath/>
+//                 </div>
+//             </HashRouter >
+//         )
+//     }
+// }
