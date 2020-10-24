@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 class TopicController extends Controller
 {
     public function index () {
-        $creator_id = 3;
+        $creator_id = 1;
 
         $myTopic = Topics::select('id' ,'name', 'creator_id', 'created_at', 'is_public', 'is_daft', 'is_played')->where('creator_id', $creator_id)->where('is_deleted', 0)->get();
         $result = [];
@@ -24,7 +24,7 @@ class TopicController extends Controller
             $topic['creator_name'] = $creatorName;
             $topic['number_question'] = Questions::where('topic_id', $topic['id'])->count();
             if ($topic['is_played']) {
-                $numberPlayer = Rooms::select('id')->where('topic_id', $topic['id'])->get();
+                $numberPlayer = Rooms::select('id')->where('topic_id', $topic['id'])->count();
                 $topic['number_played'] = $numberPlayer;
             }
         }
