@@ -54,7 +54,7 @@ C. Factory
 
 D. Data 
 
-- php artisan db:seed FakeAllDataSeed
+- php artisan db:seed --class=FakeAllDataSeed
 (Fake all data)
 
 - php artisan db:seed --class=FakeSpecSeed
@@ -62,5 +62,13 @@ D. Data
 
 E. Database
 
+- php artisan migrate:fresh 
+(Rerun all migrate)
 
+- php artisan make:migration name_migration --create=name_table
 
+- php artisan make:migration name_migration --table=name_table
+
+F. Controller
+
+- php artisan make:controller NameController --resource
