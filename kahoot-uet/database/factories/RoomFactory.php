@@ -10,9 +10,9 @@ $factory->define(Rooms::class, function (Faker $faker) {
     $maxValPin = 9999999999;
     return [
         'PIN' => rand($minValPin, $maxValPin),
-        'creator_id' => rand(1, 100),
-        'is_lock' => rand(0, 1),
-        'is_finish' => rand(0, 1),
-        'topic_id' => rand(1, 10)
+        'creator_id' => rand(1, 10),
+        'topic_id' => rand(1, 20),
+        'is_locked' => rand(0, 1),
+        'is_finished' => rand(0, 1),
     ];
 });

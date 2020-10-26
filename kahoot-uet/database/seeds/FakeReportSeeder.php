@@ -11,7 +11,7 @@ class FakeReportSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 500;
+        $numberRecord = 100;
         factory(Reports::class, $numberRecord)->create();
     }
 }
