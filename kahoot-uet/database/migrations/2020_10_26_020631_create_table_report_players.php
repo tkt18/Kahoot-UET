@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlayerRoomsTable extends Migration
+class CreateTableReportPlayers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreatePlayerRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('player_room', function (Blueprint $table) {
+        Schema::create('report_players', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('player_id')->nullable(false);
-            $table->unsignedBigInteger('room_id')->nullable(false);
-            $table->unsignedBigInteger('score_total')->nullable(false);
+            $table->unsignedBigInteger('question_id')->nullable(false);
+            $table->unsignedDouble('player_score', 8, 2);
+            $table->unsignedFloat('reply_time', 8, 2);
+            $table->jsonb('ans_selected');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreatePlayerRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('player_room');
+        Schema::dropIfExists('report_players');
     }
 }
