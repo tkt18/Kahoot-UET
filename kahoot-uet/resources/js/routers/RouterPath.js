@@ -4,6 +4,7 @@ import Home from "../components/user/Home";
 import Reports from "../components/user/Reports";
 import Kahoots from "../components/user/Kahoots";
 import Creator from "../components/user/Creator";
+import Login from "../components/user/Login";
 
 function RouterPath() {
     return (
@@ -13,6 +14,7 @@ function RouterPath() {
                 <Route exact path="/kahoots" component={Kahoots} />
                 <Route exact path="/user-reports" component={Reports} />
                 <Route exact path="/creator" component={Creator} />
+                <Route exact path="/auth/login" component={Login} />
             </Switch>
         </main>
     );
