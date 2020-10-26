@@ -78,3 +78,5 @@ E. Database
 F. Controller
 
 - php artisan make:controller NameController --resource
+
+G.
