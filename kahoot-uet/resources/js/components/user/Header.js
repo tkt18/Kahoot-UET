@@ -14,7 +14,7 @@ import {
 
 function Header() {
     return (
-        <HashRouter>
+        <div>
             <nav className="navbar navbar-expand-lg nav-header">
                 <Link to={"/"}>
                     <img src={image_logo} alt="logo" width={100} height={35} />
@@ -84,14 +84,13 @@ function Header() {
                     </div>
                 </div>
             </nav>
-            {/* RouterPath show components under header */}
-            <RouterPath />
-        </HashRouter>
+            
+        </div>
     );
 }
 
 export default Header;
 
-if (document.getElementById("header")) {
-    ReactDOM.render(<Header />, document.getElementById("header"));
-}
+// if (document.getElementById("header")) {
+//     ReactDOM.render(<Header />, document.getElementById("header"));
+// }

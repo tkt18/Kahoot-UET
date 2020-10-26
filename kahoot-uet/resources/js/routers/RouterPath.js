@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Router } from "react-router-dom";
 import Home from "../components/user/Home";
 import Reports from "../components/user/Reports";
 import Kahoots from "../components/user/Kahoots";
 import Creator from "../components/user/Creator";
 import Login from "../components/user/Login";
+import Header from '../components/user/Header';
 
 function RouterPath() {
     return (
         <main>
+            <Header />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/kahoots" component={Kahoots} />
@@ -21,26 +23,3 @@ function RouterPath() {
 }
 
 export default RouterPath;
-
-// export default class Test extends Component {
-//     render() {
-//         return (
-//             <HashRouter>
-//                 <div>
-//                     <ul>
-//                         <li>
-//                             <Link to={'/'}>Home</Link>
-//                         </li>
-//                         <li>
-//                             <Link to={'/topic'}>Topic</Link>
-//                         </li>
-//                         <li>
-//                             <Link to={'/about'}>About</Link>
-//                         </li>
-//                     </ul>
-//                     <RouterPath/>
-//                 </div>
-//             </HashRouter >
-//         )
-//     }
-// }
