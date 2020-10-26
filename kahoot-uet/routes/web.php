@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/topic', 'TopicController@getTopic');
+Route::resource('/topic', 'TopicController');
+Route::resource('/question', 'QuestionsController');
+Route::get('/room/finish', 'RoomController@finishRoom');
+Route::get('/room/lock', 'RoomController@lockRoom');
+Route::resource('/room', 'RoomController');

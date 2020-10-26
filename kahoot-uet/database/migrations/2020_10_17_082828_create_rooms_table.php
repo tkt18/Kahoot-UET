@@ -17,7 +17,9 @@ class CreateRoomsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('PIN')->nullable(false);
             $table->unsignedBigInteger('creator_id')->nullable(false);
-            $table->boolean('is_lock')->nullable(false)->default(false)->comment('Khi phòng đã lock thì có thể chọn được tên nhưng không join được vào phòng');
+            $table->unsignedBigInteger('topic_id')->nullable(false);
+            $table->boolean('is_locked')->nullable(false)->default(0)->comment('Khi phòng đã lock thì có thể chọn được tên nhưng không join được vào phòng');
+            $table->boolean('is_finished')->nullable(false)->default(0);
             $table->timestamps();
         });
     }
