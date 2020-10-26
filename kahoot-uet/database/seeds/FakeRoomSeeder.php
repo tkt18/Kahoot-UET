@@ -12,7 +12,7 @@ class FakeRoomSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 200;
+        $numberRecord = 50;
         factory(Rooms::class, $numberRecord)->create();
     }
 }

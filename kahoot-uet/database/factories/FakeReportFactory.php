@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Reports::class, function (Faker $faker) {
     return [
-        'room_id' => rand(1, 100),
-        'name' => $faker->text,
+        'name' => $faker->name,
+        'room_id' => rand(1, 50),
         'owner_id' => rand(1, 10),
         'game_mode' => $faker->companySuffix
     ];
