@@ -62,8 +62,14 @@ D. Data
 
 E. Database
 
+- php artisan migrate:reset
+(rollback all migration)
+
 - php artisan migrate:fresh 
 (Rerun all migrate)
+
+ 
+
 
 - php artisan make:migration name_migration --create=name_table
 
