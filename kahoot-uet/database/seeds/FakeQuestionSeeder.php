@@ -12,7 +12,7 @@ class FakeQuestionSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 500;
+        $numberRecord = 100;
         factory(Questions::class, $numberRecord)->create();
     }
 }

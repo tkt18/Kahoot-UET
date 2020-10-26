@@ -12,7 +12,7 @@ class FakePlayerSeeder extends Seeder
      */
     public function run()
     {
-        $numberRecord = 1000;
+        $numberRecord = 500;
         factory(Players::class, $numberRecord)->create();
     }
 }
