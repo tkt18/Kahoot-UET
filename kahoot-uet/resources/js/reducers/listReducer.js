@@ -109,10 +109,11 @@ const listReducer = (state = initialState, action) => {
       };
     }
     case "MOVE_QUESTION": {
-      const newList = [...state.qlist];
+      // const newList = [...s];
+      // console.log("MOVEEEEEEEEEEEEE",payload)
       return {
-        ...state,
-        qList: newList,
+        order: payload.order,
+        qlist: payload.newOrder,
       };
     }
     case "SET_QUESTION_CONTENT":{

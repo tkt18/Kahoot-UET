@@ -21,6 +21,12 @@
     line-height: 0.875rem;
 }
 
+.create-button:hover {
+    background: rgb(211, 211, 211);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -2px inset;
+    transform: translateY(2px);
+}
+
 .nav-header {
     background-color: rgb(70, 23, 143);
 }
@@ -64,4 +70,56 @@
 
 .dropdown-person {
     margin: 0px 30px 0px 10px;
+}
+
+.reports-body {
+    min-width: 0px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1280px;
+    flex-wrap: nowrap;
+}
+
+.css-table {
+    margin: 5px;
+}
+
+.td-options {
+    display: flex;
+}
+.div-options {
+    float: right;
+}
+
+div.crKahoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;/******/
+}
+
+div.crKahoot header.crHeader{
+    background-color: indigo;
+    height: 5.5rem;
+    width: 100%;
+    padding: 0 1.5%;
+    z-index: -10000000;
+}
+
+div.crKahoot main.crMain{
+    z-index:100;
+    background-color: rgb(219, 219, 219);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.sidebar {
+     flex: 1 0 17%;
+    background-color: white;
+}
+div.editor {
+    flex: 1 0 83%;
 }

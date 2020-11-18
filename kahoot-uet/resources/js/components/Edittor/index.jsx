@@ -65,9 +65,9 @@ function Editor() {
           <div className="left-col">
             <ul className="subOption">
               <li className="selectTimeLimit">
-                <label htmlFor="timelimit">Time limit</label>
+                <label>Time limit</label>
                 <br/>
-                <select name="timelimit" id="timelimit" defaultValue={currentQuestion.timeLimit} onChange={(e) => {
+                <select name="timeLimit" id="timeLimit" defaultValue={currentQuestion.timeLimit}  onChange={(e) => {
                   handleTimeLimit(e.target.value)
                 }}>
                   <option value="5">5</option>
@@ -78,11 +78,10 @@ function Editor() {
                   <option value="90">90</option>
                   <option value="120">120</option>
                   <option value="240">240</option>
-                </select>
-                <span>Secs</span>
+                </select>Secs
               </li>
               <li className="selectPoints">
-                <label htmlFor="points">Points</label>
+                <label>Points</label>
                 <br/>
                 <input
                     type="range"
@@ -113,7 +112,7 @@ function Editor() {
           </div>
           <div className="right-col">
             <div className="preview">
-              <img className="previewImage" src={currentQuestion.image} height={"300px"}/>
+              <img className="previewImage" src={currentQuestion.image} />
             </div>
             <div className="uploadImage">
               <input type="file" defaultValue={""} onChange={(e) => handleSetImage(e.target.files[0])}/>
@@ -127,13 +126,16 @@ function Editor() {
                   return (
                       <div className="answers">
                         <input
+                          className="answer"
                           type="text"
                           defaultValue={a.answer}
+                          placeholder={"Add answer "+(currentQuestion.answers.indexOf(a)+1)+((currentQuestion.answers.indexOf(a)>1)?" (Optional)":"")}
                           onBlur={(e) => {
                             handleSetAnswer(e.target.value, currentQuestion.answers.indexOf(a))
                           }}
                         />
                         <input
+                          className="correct"
                           type="checkbox"
                           name="status"
                           checked={a.correct}

@@ -3,65 +3,90 @@ div.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 1rem;
 }
 
 div.left {
-  flex: 1 0 20%;
+  /* background-color: rgb(255, 0, 0); */
+  flex-basis: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  /* padding: 1% 1%; */
+}
+
+div.left img {
+  height: 3rem;
+  padding-right: 5%;
+}
+div.left div.settings {
+  border-radius: 5px;
+  height: 4rem;
+  font-size: 1.5rem;
+  flex-basis: 45%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
+div.left div.settings div.title {
+  /* background-color: thistle; */
+  font-size: large;
+  font-weight: bold;
+}
+
+div.left div.settings div.sbutton {
+  justify-self: flex-end;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(77, 79, 231);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 div.right {
-  flex: 1 0 70%;
+  flex-basis: 50%;
+  /* background-color: cyan; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-div.left img {
-  /* align-self: center; */
-  /* flex: 1 0 20%; */
-  max-height: 2rem;
-}
-div.left > button.settings {
-  align-self: center;
-  flex: 1 1 20%;
-  max-width: 15vw;
-  max-height: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div.left > button.settings > p.title {
-  justify-self: flex-start;
-  flex: 1 0 60%;
-  color: rgb(7, 8, 58);
-}
-
-div.left > button.settings > p.sbutton {
-  justify-self: flex-end;
-  flex: 1 0 30%;
-  font-weight: bolder;
-  color: white;
-  background-color: rgb(77, 79, 231);
-  border-radius: 0.2rem;
-  padding: 0.8rem 0;
-}
-
-div.right > p {
+div.right div.preview {
   font-size: 1rem;
   color: white;
   background-color: rgb(52, 54, 165);
   border-radius: 0.2rem;
   padding: 0.5rem 0.5rem;
 }
-div.right > button {
-  width: 5rem;
+div.right button.submit {
+  cursor: pointer;
+  width: 9rem;
+  height: 4rem;
   font-size: 1rem;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.5rem 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: aliceblue;
+}
+div.right button.exit {
+  border: 1px solid white;
+  background-color: indigo;
+  color: aliceblue;
+}
+div.right button.exit:hover {
+  border: 1px solid white;
+  background-color: rgb(92, 1, 156);
+}
+div.right button.done {
+  border: 0px;
+  background-color: rgb(37, 161, 12);
+  border-bottom: 4px solid rgb(10, 90, 3);
+}
+div.right button.done:hover {
+  margin-top: 4px;
+  border: 0px;
+  background-color: rgb(10, 90, 3);
 }
